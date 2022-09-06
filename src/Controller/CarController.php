@@ -65,4 +65,25 @@ class CarController extends AbstractController
 
         return $this->render("car_form.html.twig", ['carForm' => $carForm->createView()]);
     }
+
+    /**
+     * @Route("reservation/car/{id}", name="reservation_car")
+     */
+    public function reservationCar(
+        Request $request,
+        CarRepository $carRepository,
+        EntityManagerInterface $entityManagerInterface,
+        $id
+    ) {
+        $car = $carRepository->find($id);
+
+        $text = $request->request->get('reservation');
+
+        $car->setReservation($text);
+
+        $entityManagerInterface->persist($car);
+        $entityManagerInterface->flush();
+
+        return $this->redirectToRoute('car_list');
+    }
 }

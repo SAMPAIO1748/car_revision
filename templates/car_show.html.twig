@@ -12,4 +12,10 @@
 
 	{% endif %}
 
+	<form action="{{ path('reservation_car', {'id' : car.id }) }}" method="post">
+		<label for="reservation">Réserver</label>
+		<textarea name="reservation" id="reservation" cols="30" rows="10"></textarea>
+		<input type="submit" value="Réserver">
+	</form>
+
 {% endblock %}

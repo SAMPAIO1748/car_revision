@@ -22,3 +22,7 @@ return function (array $context) {
 
 // Créer la méthode createCar qui va créer une nouvelle voiture dans la bdd 
 // mais laissera vide le champs reservation
+
+// Dans la page car_show ajouté un formulaire qui contient juste un textearea et un bouton "Réserver"
+// et quand j'appuie sur le bouton la texte qui est dans la texteaera s'enrigistre dans la colonne
+// réservation de la voiture
