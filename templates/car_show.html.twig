@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<h1>{{ car.name }}</h1>
+	<h2>{{ car.price }}
+		€</h2>
+	<p>{{ car.description }}</p>
+	{% if car.reservation %}
+
+		<p>{{ car.reservation }}</p>
+
+	{% endif %}
+
+{% endblock %}

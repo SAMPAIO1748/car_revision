@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	{% for car in cars | reverse | slice(0, 2) %}
+		<a href="{{ path('car_show', {'id' : car.id } ) }}">
+			<h2>{{ car.name }}</h2>
+		</a>
+		<h3>{{ car.price }}</h3>
+		<hr>
+	{% endfor %}
+
+{% endblock %}
