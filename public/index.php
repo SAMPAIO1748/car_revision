@@ -18,4 +18,7 @@ return function (array $context) {
 
 // Créer un CarController.
 // Avec les méthodes carList et carShow qui vont afficher la liste des voitures 
-//et une voiture en particulier grâce à son id
+// et une voiture en particulier grâce à son id
+
+// Créer la méthode createCar qui va créer une nouvelle voiture dans la bdd 
+// mais laissera vide le champs reservation
